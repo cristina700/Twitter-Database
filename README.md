@@ -1,2 +1,2 @@
 # Twitter-Database
-Creating a database, and deleting and updating info
+Creating a database, deleting and updating info
