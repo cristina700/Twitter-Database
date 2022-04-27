@@ -66,3 +66,30 @@ select title from songs where title IN ("Shake it off",
 "Stay","My heart will go on","A new day has come",
 "Conga")
 ;
+RESULTS OF QUERIES
+
++-------------------+
+|       title       |
++-------------------+
+| Bicycle Race      |
+| Bohemian Rhapsody |
++-------------------+
+
++----------------+
+|      name      |
++----------------+
+| Taylor Swift   |
+| Celine Dion    |
+| Rihanna        |
+| Gloria Estefan |
++----------------+
+
++---------------------+
+|        title        |
++---------------------+
+| Shake it off        |
+| Stay                |
+| My heart will go on |
+| A new day has come  |
+| Conga               |
++---------------------+
