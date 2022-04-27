@@ -1,0 +1,30 @@
+sqlite> CREATE TABLE user (id INTEGER PRIMARY KEY, name TEXT);INSERT INTO user (name) VALUES ("CRISTINA sayavedra");INSERT INTO user (name) VALUES ("SANTIAGO ramayo");INSERT INTO user (name) VALUES ("PEPITO gonzalez");INSERT INTO user (name) VALUES ("JUANA rodriguez");CREATE TABLE twitter (id INTEGER PRIMARY KEY, user_id INTEGER, date TEXT, content TEXT);INSERT INTO twitter (user_id, date, content) VALUES (1, "2022-03-02",    "We have a horrible government");    INSERT INTO twitter (user_id, date, content) VALUES (3, "2022-03-14",    "i hope the russian-ucranian war ends soon");INSERT INTO twitter (user_id, date, content) VALUES (4, "2022-03-31",    "i wish everybody to have a wonderful 2022");    INSERT INTO twitter (user_id, date, content) VALUES (2, "2022-04-02",    "Im happy with my life");
+sqlite> .mode table
+sqlite> SELECT * FROM twitter;
++----+---------+------------+-------------------------------------------+
+| id | user_id |    date    |                  content                  |
++----+---------+------------+-------------------------------------------+
+| 1  | 1       | 2022-03-02 | We have a horrible government             |
+| 2  | 3       | 2022-03-14 | i hope the russian-ucranian war ends soon |
+| 3  | 4       | 2022-03-31 | i wish everybody to have a wonderful 2022 |
+| 4  | 2       | 2022-04-02 | Im happy with my life                     |
++----+---------+------------+-------------------------------------------+
+sqlite> UPDATE twitter SET content = "i dont know what is going on in the world" WHERE id = 1;SELECT * FROM twitter;
++----+---------+------------+-------------------------------------------+
+| id | user_id |    date    |                  content                  |
++----+---------+------------+-------------------------------------------+
+| 1  | 1       | 2022-03-02 | i dont know what is going on in the world |
+| 2  | 3       | 2022-03-14 | i hope the russian-ucranian war ends soon |
+| 3  | 4       | 2022-03-31 | i wish everybody to have a wonderful 2022 |
+| 4  | 2       | 2022-04-02 | Im happy with my life                     |
++----+---------+------------+-------------------------------------------+
+sqlite> DELETE from user WHERE id = 4;
+
+sqlite> select * from user;
++----+--------------------+
+| id |        name        |
++----+--------------------+
+| 1  | CRISTINA sayavedra |
+| 2  | SANTIAGO ramayo    |
+| 3  | PEPITO gonzalez    |
++----+--------------------+
